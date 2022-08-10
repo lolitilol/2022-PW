@@ -1,0 +1,91 @@
+from re import X
+from tkinter import Variable
+import xlwt
+from xlwt import Workbook
+
+wb = Workbook()
+
+
+sheet1 = wb.add_sheet('Research Qn 1a')
+x = 1000
+row = 0
+
+#sheet1.write(row,col, data, style)
+for row in range(0,9000):
+    
+    sheet1.write(row, 1, x)
+
+    y = x
+    Ao = "".join(sorted(str(y).zfill(4)))
+    Do = "".join(sorted(str(y).zfill(4),reverse= True))
+    y = int(Do) + int(Ao)
+    if(y>=10000):
+        y = y - 10000
+    else:
+        y=y
+    sheet1.write(row, 2, y)
+
+    z = y
+    Ao = "".join(sorted(str(z).zfill(4)))
+    Do = "".join(sorted(str(z).zfill(4),reverse= True))
+    z = int(Do)+ int(Ao)
+    if(z>=10000):
+        z = z - 10000
+    else:
+        z=z
+    sheet1.write(row, 3, z)
+
+    a = z
+    Ao = "".join(sorted(str(a).zfill(4)))
+    Do = "".join(sorted(str(a).zfill(4),reverse= True))
+    a = int(Do)+ int(Ao)
+    if(a>=10000):
+        a = a - 10000
+    else:
+        a=a
+    sheet1.write(row, 4, a)
+
+    b = a
+    Ao = "".join(sorted(str(b).zfill(4)))
+    Do = "".join(sorted(str(b).zfill(4),reverse= True))
+    b = int(Do)+ int(Ao)
+    if(b>=10000):
+        b = b - 10000
+    else:
+        b=b
+    sheet1.write(row, 5, b)
+
+    c = b
+    Ao = "".join(sorted(str(c).zfill(4)))
+    Do = "".join(sorted(str(c).zfill(4),reverse= True))
+    c = int(Do)+ int(Ao)
+    if(c>=10000):
+        c = c - 10000
+    else:
+        c=c
+    sheet1.write(row, 6, c)
+
+    d = c
+    Ao = "".join(sorted(str(d).zfill(4)))
+    Do = "".join(sorted(str(d).zfill(4),reverse= True))
+    d = int(Do)+ int(Ao)
+    if(d>=10000):
+        d = d - 10000
+    else:
+        d=d
+    sheet1.write(row, 7, d)
+
+    e = d
+    Ao = "".join(sorted(str(e).zfill(4)))
+    Do = "".join(sorted(str(e).zfill(4),reverse= True))
+    e = int(Do)+ int(Ao)
+    if(e>=10000):
+        e = e - 10000
+    else:
+        e=e
+    sheet1.write(row, 8, e)
+
+    x = x+1
+
+
+wb.save('Research Qn 1a.xls')
