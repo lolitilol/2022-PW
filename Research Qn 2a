@@ -1,0 +1,125 @@
+from re import X
+from tkinter import Variable
+import xlwt
+from xlwt import Workbook
+
+wb = Workbook()
+
+
+sheet1 = wb.add_sheet('Research Qn 1b')
+x = 1000
+row = 0
+
+#sheet1.write(row,col, data, style)
+for row in range(0,9000):
+    
+    sheet1.write(row, 1, x)
+
+    y = x
+    Do = str(y)[::-1]
+    if(int(Do)>y):
+        y= int(Do) - y
+    else:
+        y = y - int(Do)
+    sheet1.write(row, 2, y)
+
+    z = y
+    Do = str(z)[::-1]
+    if(int(Do)>z):
+        z= int(Do) - z
+    else:
+        z = z - int(Do)
+    sheet1.write(row, 3, z)
+
+    a = z
+    Do = str(a)[::-1]
+    if(int(Do)>a):
+        a= int(Do) - a
+    else:
+        a = a - int(Do)
+    sheet1.write(row, 4, a)
+
+    b = a
+    Do = str(b)[::-1]
+    if(int(Do)>b):
+        b= int(Do) - b
+    else:
+        b = b - int(Do)
+    sheet1.write(row, 5, b)
+
+    c = b
+    Do = str(c)[::-1]
+    if(int(Do)>c):
+        c = int(Do) - c
+    else:
+        c = c - int(Do)
+    sheet1.write(row, 6, c)
+
+    d = c
+    Do = str(d)[::-1]
+    if(int(Do)>d):
+        d= int(Do) - d
+    else:
+        d = d - int(Do)
+    sheet1.write(row, 7, d)
+
+    e = d
+    Do = str(e)[::-1]
+    if(int(Do)>e):
+        e= int(Do) - e
+    else:
+        e = e - int(Do)
+    sheet1.write(row, 8, e)
+
+    f = e
+    Do = str(f)[::-1]
+    if(int(Do)>f):
+        f = int(Do) - f
+    else:
+        f = f - int(Do)
+    sheet1.write(row, 9, f)
+
+    g = f
+    Do = str(g)[::-1]
+    if(int(Do)>g):
+        g = int(Do) - g
+    else:
+        g = g - int(Do)
+    sheet1.write(row, 10, g)
+
+    h = g
+    Do = str(h)[::-1]
+    if(int(Do)>h):
+        h = int(Do) - h
+    else:
+        h = h - int(Do)
+    sheet1.write(row, 11, h)
+
+    i = h
+    Do = str(i)[::-1]
+    if(int(Do)>i):
+        i = int(Do) - i
+    else:
+        i = i - int(Do)
+    sheet1.write(row, 12, i)
+
+    j = i
+    Do = str(j)[::-1]
+    if(int(Do)>j):
+        j = int(Do) - j
+    else:
+        j = j - int(Do)
+    sheet1.write(row, 13, j)
+
+    k = j
+    Do = str(k)[::-1]
+    if(int(Do)>k):
+        k = int(Do) - k
+    else:
+        k = k - int(Do)
+    sheet1.write(row, 14, k)
+
+    x = x+1
+
+
+wb.save('Research Qn 1b.xls')
